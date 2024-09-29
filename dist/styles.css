@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #1C1C1C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.calculator-container {
+  width: 90vw;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #333333;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.calculator-screen {
+  background-color: #000;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#screen {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  font-size: 2.5rem;
+  text-align: right;
+  font-family: 'Poppins', sans-serif;
+  user-select: none; /* Prevents text selection on the screen */
+  cursor: pointer; /* Changes cursor to indicate interactiveness */
+  padding: 20px;
+}
+
+#screen:hover {
+  background-color: #111; /* Subtle change on hover */
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.button {
+  background-color: #4F4F4F;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  background-color: #555555;
+}
+
+.operator {
+  background-color: #f39c12;
+  color: white;
+}
+
+.operator:hover {
+  background-color: #e67e22;
+}
+
+.function {
+  background-color: #a5a5a5;
+  color: black;
+}
+
+.function:hover {
+  background-color: #909090;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.capsule {
+  border-radius: 50px; /* Capsule-like design */
+  justify-content: left;
+  padding-left: 25px;
+}
+
+.equals {
+  background-color: #f39c12;
+  border-radius: 50%;
+  font-weight: bold;
+  color: #fff;
+}
+
+.equals:hover {
+  background-color: #e67e22;
+}
+
+/* Media queries for smaller devices */
+@media (max-width: 768px) {
+  #screen {
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  .button {
+    padding: 18px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #screen {
+    font-size: 1.8rem;
+    padding: 10px;
+  }
+
+  .button {
+    padding: 15px;
+    font-size: 1rem;
+  }
+}

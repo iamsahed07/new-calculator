@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive iPhone Style Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator-container">
+    <!-- Calculator Screen -->
+    <div class="calculator-screen">
+      <input type="text" id="screen" disabled>
+    </div>
+    
+    <!-- Calculator Buttons -->
+    <div class="calculator-buttons">
+      <button class="button function" onclick="clearScreen()">AC</button>
+      <button class="button function" onclick="toggleSign()">+/-</button> <!-- +/- Button -->
+      <button class="button function" onclick="addOperation('%')">%</button>
+      <button class="button operator" onclick="addOperation('/')">÷</button>
+
+      <button class="button" onclick="appendNumber('7')">7</button>
+      <button class="button" onclick="appendNumber('8')">8</button>
+      <button class="button" onclick="appendNumber('9')">9</button>
+      <button class="button operator" onclick="addOperation('*')">×</button>
+
+      <button class="button" onclick="appendNumber('4')">4</button>
+      <button class="button" onclick="appendNumber('5')">5</button>
+      <button class="button" onclick="appendNumber('6')">6</button>
+      <button class="button operator" onclick="addOperation('-')">−</button>
+
+      <button class="button" onclick="appendNumber('1')">1</button>
+      <button class="button" onclick="appendNumber('2')">2</button>
+      <button class="button" onclick="appendNumber('3')">3</button>
+      <button class="button operator" onclick="addOperation('+')">+</button>
+
+      <button class="button zero capsule" onclick="appendNumber('0')">0</button>
+      <button class="button" onclick="appendNumber('.')">.</button>
+      <button class="button operator equals" onclick="calculate()">=</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
